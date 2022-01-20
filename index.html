@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,300;0,400;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+    <h1>What's the weather in...?</h1>
+    <div class="search-bar">
+    <form class="inline" id="search-form">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Enter your city"
+        autocomplete="off"
+        autofocus="on"
+      />
+
+      <input type="submit" value="Search" />
+    </form>
+    <form class="inline" id="searchcurrent">
+      <input
+        type="submit"
+        value="Current location"
+        name=""
+        class ="current-location"
+        id="currentLocation"
+      />
+    </form>
+  </div>
+    <div class="container">
+      <div class="main-card">
+        <h2 class="city" id="city"></h2>
+        <div class="row">
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body-today">
+                <h3 class="Today" id="currentDay">Monday</h3>
+                <img
+                  class="imageToday"
+                  src="images/sun2.png"
+                  alt="sun"
+                  width="140px"
+                />
+                <br />
+
+                <h3 class="today-temperature">
+                  <span id="today-temperature"> 28</span>°C
+                </h3>
+
+                <h3 class="card-title" id="weather-description"">Sunny</h3>
+                <p class="card-text">
+                  Humidity: <span id="humidity">5</span>%
+                  <br />
+                  Wind: <span id="wind">8</span>km/h
+                </p>
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body-nextDays">
+                <h5 class="followingDays">Tuesday</h5>
+                <img
+                  class="icons-rightside"
+                  src="images/sun2.png"
+                  alt="sun"
+                  width="60px"
+                />
+                <p class="temperatureNextDays">22-28°C</p>
+                <hr />
+                <h5 class="followingDays">Wednesday</h5>
+                <img
+                  class="icons-rightside"
+                  src="images/sun2.png"
+                  alt="sun"
+                  width="60px"
+                />
+                <p class="temperatureNextDays">23-28°C</p>
+                <hr />
+                <h5 class="followingDays">Thursday</h5>
+                <img
+                  class="icons-rightside"
+                  src="images/windy.png"
+                  alt="sun"
+                  width="60px"
+                />
+                <p class="temperatureNextDays">19-25°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <span class="open-source"> <strong>
+          <a href="https://github.com/valec3r/WeatherApp" class="link">
+          Open-source code</a> by Valentina Carrara</strong></span>
+      </div>
+
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
