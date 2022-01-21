@@ -1,0 +1,102 @@
+.app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.app-container {
+  padding: 5px;
+  border: 3px solid #00527f;
+  border-radius: 15px;
+  background-image: url(https://static.vecteezy.com/ti/foto-gratuito/p1/2259916-cielo-nuvoloso-al-tramonto-gratuito-foto.jpg);
+}
+
+body {
+  font-family: monospace;
+  background-image: url(https://static.vecteezy.com/ti/foto-gratuito/p1/2259916-cielo-nuvoloso-al-tramonto-gratuito-foto.jpg);
+}
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 10px;
+  margin: 10px auto 10px;
+  color: black;
+}
+.inline {
+  display: flex;
+  margin-right: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-left: 27px;
+}
+input {
+  background-color: #ffdce2;
+  color: #00527f;
+  border-radius: 15px;
+  border: 2px solid #00527f;
+  padding: 5px 15px;
+  margin-right: 5px;
+}
+.current-location {
+  color: #ffdce2;
+  background-color: #00527f;
+  border: 2px solid #00527f;
+  text-align: center;
+}
+.city {
+  color: #00527f;
+  font-size: 35px;
+  text-align: center;
+  font-family: "Prompt", sans-serif;
+  padding: 10px;
+}
+
+.main-card {
+  text-align: center;
+}
+
+.card {
+  border: 2px solid #00527f;
+  border-radius: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 3px;
+  background-color: #ffdce2;
+}
+.Today {
+  font-size: 28px;
+  color: #00527f;
+}
+
+.imageToday {
+  font-size: 60px;
+  padding: 20px 0;
+}
+
+.today-temperature {
+  font-size: 40px;
+}
+.card-title {
+  font-size: 35px;
+  padding: 10px;
+}
+.followingDays {
+  font-size: 27px;
+  color: #00527f;
+}
+.temperatureNextDays {
+  font-size: 19px;
+}
+.link {
+  color: #ffdce2;
+}
+.open-source {
+  text-align: center;
+  margin: 10px 0 60px auto;
+  color: #00527f;
+}
