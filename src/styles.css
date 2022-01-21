@@ -57,6 +57,7 @@ input {
 
 .main-card {
   text-align: center;
+  padding-bottom: 15px;
 }
 
 .card {
@@ -65,28 +66,28 @@ input {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
-  padding-bottom: 3px;
+  padding-bottom: 10px;
   background-color: #ffdce2;
 }
 .Today {
-  font-size: 28px;
+  font-size: 25px;
   color: #00527f;
 }
 
 .imageToday {
   font-size: 60px;
-  padding: 20px 0;
+  padding: 16px 0;
 }
 
 .today-temperature {
-  font-size: 40px;
+  font-size: 47px;
 }
 .card-title {
   font-size: 35px;
   padding: 10px;
 }
 .followingDays {
-  font-size: 27px;
+  font-size: 25px;
   color: #00527f;
 }
 .temperatureNextDays {
