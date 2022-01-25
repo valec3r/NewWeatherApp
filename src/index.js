@@ -1,6 +1,4 @@
 function displayTemp(response) {
-  console.log(response);
-
   let displaySearch = document.querySelector("#city");
   displaySearch.innerHTML = response.data.name;
   let temp = Math.round(response.data.main.temp);
