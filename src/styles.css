@@ -1,5 +1,5 @@
 .app-wrapper {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 30px auto;
 }
 .app-container {
@@ -70,18 +70,19 @@ input {
   background-color: #ffdce2;
 }
 .Today {
-  font-size: 25px;
+  font-size: 29px;
   color: #00527f;
 }
 
 .imageToday {
   font-size: 60px;
-  padding: 16px 0;
+  padding: 18px 0;
 }
 
-.today-temperature {
+#today-temperature {
   font-size: 47px;
 }
+
 #weather-description::first-letter {
   text-transform: capitalize;
 }
