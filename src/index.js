@@ -120,7 +120,7 @@ function displayForecast(response) {
    class="icons-rightside"
    src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
    alt="sun"
-   width="60px"
+   width="64px"
  />
  <p class="temperatureNextDays"><span class="forecast-temperature-max">${Math.round(
    forecastDay.temp.max

@@ -1,9 +1,12 @@
 .app-wrapper {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 30px auto;
+  text-align: center;
 }
 .app-container {
-  padding: 5px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 800px;
   border: 3px solid #00527f;
   border-radius: 15px;
   background-image: url(https://static.vecteezy.com/ti/foto-gratuito/p1/2259916-cielo-nuvoloso-al-tramonto-gratuito-foto.jpg);
@@ -20,7 +23,7 @@ h1 {
   font-weight: 600;
   padding: 10px;
   margin: 10px auto 10px;
-  color: black;
+  color: #00527f;
 }
 .inline {
   display: flex;
@@ -34,7 +37,7 @@ h1 {
   margin-left: 27px;
 }
 input {
-  background-color: #ffdce2;
+  background-color: #f1b5cf;
   color: #00527f;
   border-radius: 15px;
   border: 2px solid #00527f;
@@ -42,7 +45,7 @@ input {
   margin-right: 5px;
 }
 .current-location {
-  color: #ffdce2;
+  color: #f1b5cf;
   background-color: #00527f;
   border: 2px solid #00527f;
   text-align: center;
@@ -67,7 +70,7 @@ input {
   padding-right: 20px;
   padding-top: 20px;
   padding-bottom: 10px;
-  background-color: #ffdce2;
+  background-color: #f1b5cf;
 }
 .Today {
   font-size: 29px;
@@ -75,12 +78,16 @@ input {
 }
 
 .imageToday {
-  font-size: 60px;
+  font-size: 120px;
   padding: 18px 0;
 }
 
 #today-temperature {
   font-size: 47px;
+}
+
+#weather-description {
+  font-size: 25px;
 }
 
 #weather-description::first-letter {
