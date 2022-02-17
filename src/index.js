@@ -1,4 +1,12 @@
+function getForecast(coordinates) {
+  let apiKey = "016a3d02d3a57ac8d3bd0f8e3156b890";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemp(response) {
+  console.log(response);
+
   let displaySearch = document.querySelector("#city");
   displaySearch.innerHTML = response.data.name;
   let temp = Math.round(response.data.main.temp);
@@ -17,6 +25,18 @@ function displayTemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
+}
+
+//Default view at landing//
+function searchWeatherBarcelona() {
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let apiKey = "da4354ccc4b5c937168c50391a787c99";
+  let city = "Barcelona";
+  let unit = "metric";
+  let url = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=${unit}`;
+  axios.get(url).then(displayTemp);
 }
 
 function search(event) {
@@ -31,15 +51,6 @@ function search(event) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
-
-// Search for current location
-
-function searchLocation(position) {
-  let apiKey = "da4354ccc4b5c937168c50391a787c99";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(displayTemp);
-}
 
 function getCurrentLocation(event) {
   event.preventDefault();
@@ -79,6 +90,59 @@ function showToday(date) {
 let Today = document.querySelector("#currentDay");
 Today.innerHTML = showToday(currentTime);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index > 0 && index < 4) {
+      forecastHTML =
+        forecastHTML +
+        ` <h5 class="followingDays">${formatDay(forecastDay.dt)}</h5>
+ <img
+   class="icons-rightside"
+   src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+   alt="sun"
+   width="60px"
+ />
+ <p class="temperatureNextDays"><span class="forecast-temperature-max">${Math.round(
+   forecastDay.temp.max
+ )}°C</span>-<span class="forecast-temperature-min">${Math.round(
+          forecastDay.temp.min
+        )}°C</span></p>
+ <hr />`;
+    }
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
+// Search for current location
+
+function searchLocation(position) {
+  let apiKey = "da4354ccc4b5c937168c50391a787c99";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayTemp);
+}
+
 let celsiusTemperature = null;
 
 function convertoCelsius(event) {
@@ -103,3 +167,5 @@ function convertoFahrenheit(event) {
 
 let fahrenheitClick = document.querySelector("#fahrenheit");
 fahrenheitClick.addEventListener("click", convertoFahrenheit);
+
+searchWeatherBarcelona();

@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <div class="app-wrapper">
     <div class="app-container">
     <h1>What's the weather in...?</h1>
     <div class="search-bar">
@@ -50,20 +49,20 @@
         <h2 class="city" id="city"></h2>
         <div class="row">
           <div class="col-6">
+              
             <div class="card">
               <div class="card-body-today">
                 <h3 class="Today" id="currentDay">Monday</h3>
                 <img
                   class="imageToday"
-                  src="http://openweathermap.org/img/wn/01d@2x.png"
+                  src="http://openweathermap.org/img/wn/01d@2x.png" 
+                  id="icon"
                   alt=""
                   width="140px"
-                  id="icon"
                 />
                 <br />
-
                 <h3 class="today-temperature">
-                   <span id="today-temperature"></span><sup><a href="#" class ="active" id= "celsius">°C</a><span class="hyphen">|</span><a href="#" id="fahrenheit">°F</a></strong>
+                  <span id="today-temperature">28</span><sup><a href="#" class ="active" id= "celsius">°C</a><span class="hyphen">|</span><a href="#" id="fahrenheit">°F</a></strong>
                 </h3>
 
                 <h3 class="card-title" id="weather-description"">Sunny</h3>
@@ -80,45 +79,18 @@
 
           <div class="col-6">
             <div class="card">
-              <div class="card-body-nextDays">
-                <h5 class="followingDays">Tuesday</h5>
-                <img
-                  class="icons-rightside"
-                  src="images/sun2.png"
-                  alt="sun"
-                  width="60px"
-                />
-                <p class="temperatureNextDays">22-28°C</p>
-                <hr />
-                <h5 class="followingDays">Wednesday</h5>
-                <img
-                  class="icons-rightside"
-                  src="images/sun2.png"
-                  alt="sun"
-                  width="60px"
-                />
-                <p class="temperatureNextDays">23-28°C</p>
-                <hr />
-                <h5 class="followingDays">Thursday</h5>
-                <img
-                  class="icons-rightside"
-                  src="images/windy.png"
-                  alt="sun"
-                  width="60px"
-                />
-                <p class="temperatureNextDays">19-25°C</p>
+              <div class="card-body-nextDays" id="forecast">
+                
               </div>
             </div>
           </div>
         </div>
       </div>
-       
-      </div>
-       
-      </div>
-<span class="open-source"> <strong>
+        <span class="open-source"> <strong>
           <a href="https://github.com/valec3r/WeatherApp" class="link">
           Open-source code</a> by Valentina Carrara</strong></span>
+      </div>
+
     </div>
 
     <script src="src/index.js"></script>
